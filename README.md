@@ -6,4 +6,4 @@ The final dataset is stored as both a [.csv file](maternal_health_2014.csv) and 
 
 This dataset pulls from data published by the [World Bank](WB_MMR_2014.csv) and [UNICEF](Maternal-and-Newborn-Coverage-Database-December-2022.xlsx). The data in the UNICEF Excel spreadsheet was separated out into individual files so it could be imported into R. These files include [anc1.xlsx](anc1.xlsx), [anc4.xlsx](anc4.xlsx), [csec.xlsx](csec.xlsx), [instdel.xlsx](instdel.xlsx), [pncmom.xlsx](pncmom.xlsx), [pncnb.xlsx](pncnb.xlsx), and [sab.xlsx](sab.xlsx).
 
-Also included in this repository is the [script](codebook.Rproj) used to wrangle the data and the [R Markdown](codebook.Rmd) file used to create the codebook.
+Also included in this repository is the [script](codebook.R) used to wrangle the data and the [R Markdown](codebook.Rmd) file used to create the codebook.
