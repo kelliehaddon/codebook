@@ -1,0 +1,67 @@
+country,region,income_group,anc1,anc4,facility,csec,sba,pncmom,pncnb,mmr,mmr_group
+Afghanistan,South Asia,Low income,63.2,22.7,42.8,NA,42.8,NA,NA,785,Very high
+Austria,Western Europe,High income,NA,NA,98.5,NA,98.5,NA,NA,6,Very low
+Bangladesh,South Asia,Lower middle income,63.9,31.2,37.4,35.7,37.4,58.1,52.6,219,High
+Benin,West and Central Africa,Lower middle income,82.8,58.7,87,19.5,87,78.2,80.4,612,Very high
+Bolivia,Latin America and Caribbean,Lower middle income,NA,NA,83.1,NA,83.1,NA,NA,163,High
+Brazil,Latin America and Caribbean,Upper middle income,NA,90.1,99.1,NA,99.1,NA,NA,62,Middle
+Bulgaria,Eastern Europe and Central Asia,Upper middle income,NA,NA,93.7,4.6,93.7,NA,NA,7,Very low
+Cambodia,East Asia and Pacific,Lower middle income,95.3,75.6,83.2,7,83.2,90.3,78.8,228,High
+Cameroon,West and Central Africa,Lower middle income,82.8,58.8,61.3,27.5,61.3,65,68.5,478,Very high
+Chile,Latin America and Caribbean,High income,NA,NA,99.7,NA,99.7,NA,NA,16,Low
+China,East Asia and Pacific,Upper middle income,96.2,NA,99.6,NA,99.6,NA,NA,26,Low
+Costa Rica,Latin America and Caribbean,Upper middle income,NA,NA,99.2,12.6,99.2,NA,NA,24,Low
+Croatia,Eastern Europe and Central Asia,High income,NA,93.3,NA,NA,NA,NA,NA,6,Very low
+Cuba,Latin America and Caribbean,Upper middle income,98.5,97.8,99,5.6,99,99.2,98.4,41,Middle
+Cyprus,Western Europe,High income,NA,NA,97.4,NA,97.4,NA,NA,39,Middle
+Democratic Republic of the Congo,West and Central Africa,Low income,88.4,48,79.9,26.7,79.9,43.8,8.2,573,Very high
+Dominican Republic,Latin America and Caribbean,Upper middle income,98,92.9,97.9,21.4,97.9,94.5,95,96,Middle
+Ecuador,Latin America and Caribbean,Upper middle income,NA,NA,93.3,NA,93.3,NA,NA,65,Middle
+Egypt,Middle East and North Africa,Lower middle income,90.3,82.8,86.7,6.7,86.7,81.5,14.2,25,Low
+El Salvador,Latin America and Caribbean,Lower middle income,96,90.1,97.5,18.2,97.5,93.6,96.9,41,Middle
+Estonia,Western Europe,High income,NA,96.8,99.4,NA,99.4,NA,NA,7,Very low
+Eswatini,Eastern and Southern Africa,Lower middle income,98.5,76.1,87.7,16.7,87.7,87.5,90.4,426,Very high
+Ethiopia,Eastern and Southern Africa,Low income,41.2,32.1,16.4,NA,16.4,13.2,NA,447,Very high
+Finland,Western Europe,High income,NA,NA,99.7,NA,99.7,NA,NA,7,Very low
+Georgia,Eastern Europe and Central Asia,Upper middle income,NA,86.9,99.9,NA,99.9,NA,NA,29,Low
+Germany,Western Europe,High income,NA,99.3,98.5,NA,98.5,NA,NA,5,Very low
+Ghana,West and Central Africa,Lower middle income,90.5,87.3,73.1,16.9,73.1,81.1,22.8,286,High
+Guinea-Bissau,West and Central Africa,Low income,92.4,64.9,44,28.3,44,48.4,55.4,733,Very high
+Guyana,Latin America and Caribbean,Upper middle income,90.7,86.7,92.7,15.8,92.7,93,95.4,131,High
+India,South Asia,Lower middle income,NA,45.4,78.7,NA,78.7,39.2,NA,135,High
+Ireland,Western Europe,High income,NA,NA,99.7,NA,99.7,NA,NA,6,Very low
+Japan,East Asia and Pacific,High income,NA,NA,99.8,NA,99.8,NA,NA,5,Very low
+Kenya,Eastern and Southern Africa,Lower middle income,95.5,57.6,61.2,23.3,61.2,52.9,35.6,507,Very high
+Kosovo,Eastern Europe and Central Asia,Upper middle income,97.8,91.8,99,1.4,99,85.2,95.9,NA,NA
+Kuwait,Middle East and North Africa,High income,NA,NA,98.7,NA,98.7,NA,NA,7,Very low
+Kyrgyz Republic,Eastern Europe and Central Asia,Lower middle income,98.4,94.6,98.3,3.5,98.3,97.8,98.5,60,Middle
+Latvia,Western Europe,High income,NA,NA,98.1,NA,98.1,NA,NA,22,Low
+Lesotho,Eastern and Southern Africa,Lower middle income,95.2,74.4,76.5,13.9,76.5,62,18.4,784,Very high
+Malawi,Eastern and Southern Africa,Low income,96.1,44.7,88.9,31.3,88.9,75.1,81.6,442,Very high
+Malaysia,East Asia and Pacific,Upper middle income,97.2,NA,98.9,NA,98.9,NA,NA,23,Low
+Mexico,Latin America and Caribbean,Upper middle income,97.2,NA,95.6,NA,95.6,NA,NA,50,Middle
+Mongolia,East Asia and Pacific,Lower middle income,98.7,89.6,98.4,2.5,98.4,95.4,98.6,49,Middle
+Nepal,South Asia,Lower middle income,68.3,59.5,55.2,16,55.2,57.9,57.6,253,High
+New Zealand,East Asia and Pacific,High income,NA,NA,96.6,NA,96.6,NA,NA,8,Very low
+Norway,Western Europe,High income,NA,NA,99.1,NA,99.1,NA,NA,3,Very low
+Oman,Middle East and North Africa,High income,98.6,93.8,99.2,2,99.2,94.9,98.3,16,Low
+Pakistan,South Asia,Lower middle income,NA,NA,56,NA,56,NA,NA,210,High
+Peru,Latin America and Caribbean,Upper middle income,96.9,94.7,89.5,14.5,89.5,95.7,95.7,65,Middle
+Poland,Western Europe,High income,NA,NA,99.8,NA,99.8,NA,NA,2,Very low
+Portugal,Western Europe,High income,NA,NA,98.9,NA,98.9,NA,NA,9,Low
+Romania,Eastern Europe and Central Asia,Upper middle income,75.2,NA,NA,NA,NA,NA,NA,15,Low
+Samoa,East Asia and Pacific,Lower middle income,93.3,72.9,81.9,5.8,81.9,63.4,NA,60,Middle
+Sao Tome and Principe,West and Central Africa,Lower middle income,97.5,83.6,91,27.3,91,86.8,90.7,144,High
+Senegal,West and Central Africa,Lower middle income,96.2,48.1,76.9,18.4,76.9,NA,NA,346,Very high
+Serbia,Eastern Europe and Central Asia,Upper middle income,98.3,93.9,98.2,1.4,98.2,NA,NA,13,Low
+Singapore,East Asia and Pacific,High income,NA,NA,99.7,NA,99.7,NA,NA,8,Very low
+South Africa,Eastern and Southern Africa,Upper middle income,NA,NA,NA,NA,NA,74.3,NA,141,High
+Sri Lanka,South Asia,Lower middle income,95.5,NA,99.7,NA,99.7,NA,NA,30,Low
+State of Palestine,Middle East and North Africa,Lower middle income,99.4,95.5,99.3,22,99.3,90.7,93.9,NA,NA
+Sudan,Eastern and Southern Africa,Low income,79.1,50.7,27.7,21.5,27.7,26.6,27.7,301,High
+Togo,West and Central Africa,Low income,72.7,57.2,72.5,14.8,72.5,70.8,35.1,491,Very high
+Turkey,Eastern Europe and Central Asia,Upper middle income,97,88.9,97.2,5.7,97.2,87.7,69.5,19,Low
+Uzbekistan,Eastern Europe and Central Asia,Lower middle income,99.8,NA,99.4,NA,99.4,NA,NA,32,Middle
+Viet Nam,East Asia and Pacific,Lower middle income,95.8,73.7,93.6,4.7,93.6,89.8,89.1,103,High
+Zambia,Eastern and Southern Africa,Lower middle income,95.7,55.5,67.4,30.7,67.4,63.4,15.7,169,High
+Zimbabwe,Eastern and Southern Africa,Lower middle income,93.7,70.1,79.6,22.4,79.6,77.3,85,441,Very high

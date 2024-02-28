@@ -1,0 +1,239 @@
+---
+title: "Codebook: Global Maternal Health, 2014"
+author: "Kellie Haddon"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+           echo = FALSE,
+           eval = TRUE,
+           message = FALSE,
+           warning = FALSE)
+
+# load packages
+library(tidyverse)
+library(readxl)
+library(knitr)
+
+# load data
+df_clean = read_csv('maternal_health_2014.csv')
+```
+
+# Overview of Data
+This dataset includes data on eight maternal health indicators from 2014 in 66 countries, plus additional variables that further contextualize each country. This dataset was created to analyze how various maternal health indicators correlate with a country's maternal mortality ratio, and how these indicators can be compared between countries, regions, and income groups.
+
+# Sources and Methodology
+This dataset combines secondary health data from the UNICEF Maternal and Newborn Health Coverage Database and the World Bank DataBank tool. The dataset contains information from UNICEF on 66 countries representing 8 world regions and categorized into 4 income groups. Indicator data covers the percentage of the population in 2014 who received antenatal care (separated by at least one visit and at least 4 visits), gave birth in a health facility, gave birth through a cesarean section, had a skilled birth attendant present at birth, and received postnatal care (separated by mother and newborn). This data was merged with the World Bank's data on each country's maternal mortality ratio from 2014. All of the countries in this dataset were separated by quintile using the maternal mortality ratio variable and categorized relative to the other countries in the dataset as very low, low, middle, high, or very high.
+
+### Citations:
+
+The World Bank. (2024). World development indicators. DataBank. https://databank.worldbank.org/reports.aspx?source=2&series=SH.STA.MMRT&country=#
+
+UNICEF. (2022, December 1). Maternal and newborn health coverage database. https://data.unicef.org/resources/dataset/delivery-care/
+
+# Note on missing values
+In this dataset, missing values are notated with `NA`.
+
+# Variables
+## 1. Country
+Variable name: `country`
+
+Variable type: character
+
+Description: Name of the country
+
+Countries included: Afghanistan, Austria, Bangladesh, Benin, Bolivia, Brazil, Bulgaria, Cambodia, Cameroon, Chile, China, Costa Rica, Croatia, Cuba, Cyprus, Democratic Republic of the Congo, Dominican Republic, Ecuador, Egypt, El Salvador, Estonia, Eswatini, Ethiopia, Finland, Georgia, Germany, Ghana, Guinea-Bissau, Guyana, India, Ireland, Japan, Kenya, Kosovo, Kuwait, Kyrgyz Republic, Latvia, Lesotho, Malawi, Malaysia, Mexico, Mongolia, Nepal, New Zealand, Norway, Oman, Pakistan, Peru, Poland, Portugal, Romania, Samoa, Sao Tome and Principe, Senegal, Serbia, Singapore, South Africa, Sri Lanka, State of Palestine, Sudan, Togo, Turkey, Uzbekistan, Viet Nam, Zambia, Zimbabwe
+
+## 2. Region
+Variable name: `region`
+
+Variable type: character
+
+Description: UNICEF reporting region
+
+```{r region, include = TRUE}
+count(df_clean, region) %>%
+  mutate(values = row_number(),
+         labels = as_factor(region),
+         freq = n,
+         .keep = 'none') %>%
+  kable()
+```
+
+## 3. Income Group
+Variable name: `income_group`
+
+Variable type: factor
+
+Description: World Bank Income Group (2020)
+
+```{r income, include = TRUE}
+df_clean = df_clean %>%
+  mutate(income_group = fct_relevel(income_group,
+                                     'Low income', 'Lower middle income', 
+                                     'Upper middle income', 'High income'))
+
+count(df_clean, income_group) %>%
+  mutate(values = row_number(),
+         labels = as_factor(income_group),
+         freq = n,
+         .keep = 'none') %>%
+  kable()
+```
+
+## 4. Antenatal Care Coverage (at least one visit)
+Variable name: `anc1`
+
+Variable type: numeric
+
+Description: Percentage of women (age 15–49) attended at least once during pregnancy by skilled health personnel
+  
+```{r anc1, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(anc1, na.rm = T),
+          max = max(anc1, na.rm = T),
+          mean = mean(anc1, na.rm = T),
+          median = median(anc1, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 5. Antenatal Care Coverage (at least four visits)
+Variable name: `anc4`
+
+Variable type: numeric
+
+Description: Percentage of women (age 15–49) attended at least four times during pregnancy by any provider
+
+```{r anc4, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(anc4, na.rm = T),
+          max = max(anc4, na.rm = T),
+          mean = mean(anc4, na.rm = T),
+          median = median(anc4, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 6. Delivered in a Health Facility
+Variable name: `facility`
+
+Variable type: numeric
+
+Description: Percentage of deliveries in a health facility
+
+```{r facility, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(facility, na.rm = T),
+          max = max(facility, na.rm = T),
+          mean = mean(facility, na.rm = T),
+          median = median(facility, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 7. Delivered via Cesarean Section
+Variable name: `csec`
+
+Variable type: numeric
+
+Description: Percentage of deliveries by Cesarean section
+
+```{r csec, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(csec, na.rm = T),
+          max = max(csec, na.rm = T),
+          mean = mean(csec, na.rm = T),
+          median = median(csec, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 8. Delivery Assisted by a Skilled Birth Attendant
+Variable name: `sba`
+
+Variable type: numeric
+
+Description: Percentage of births delivered by a skilled health personnel (typically doctor, midwife and/or nurse)
+
+```{r sba, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(sba, na.rm = T),
+          max = max(sba, na.rm = T),
+          mean = mean(sba, na.rm = T),
+          median = median(sba, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 9. Post-natal Check Up for Mothers
+Variable name: `pncmom`
+
+Variable type: numeric
+
+Description: Percentage of women (age 15–49) who received postnatal care within 2 days after birth
+
+```{r pncmom, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(pncmom, na.rm = T),
+          max = max(pncmom, na.rm = T),
+          mean = mean(pncmom, na.rm = T),
+          median = median(pncmom, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 10. Post-natal Check Up for Newborns
+Variable name: `pncnb`
+
+Variable type: numeric
+
+Description: Percentage of newborns who have a postnatal contact with a health provider within 2 days of delivery
+
+```{r pncnb, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(pncnb, na.rm = T),
+          max = max(pncnb, na.rm = T),
+          mean = mean(pncnb, na.rm = T),
+          median = median(pncnb, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 11. Maternal Mortality Ratio
+Variable name: `mmr`
+
+Variable type: numeric
+
+Description: Number of maternal deaths per 100,000 live births
+
+```{r mmr, include = TRUE}
+summarize(df_clean,
+          n = n(),
+          min = min(mmr, na.rm = T),
+          max = max(mmr, na.rm = T),
+          mean = mean(mmr, na.rm = T),
+          median = median(mmr, na.rm = T)) %>%
+  kable(digits = 1L)
+```
+
+## 12. Maternal Mortality Ratio Grouping
+Variable name: `mmr_group`
+
+Variable type: factor
+
+Description: Quintile groupings of maternal mortality ratio based on the MMRs in the dataset
+
+```{r mmr_group, include = TRUE}
+df_clean = df_clean %>%
+  mutate(mmr_group = fct_relevel(mmr_group,
+                                'Very low', 'Low', 'Middle', 'High', 'Very high'))
+count(df_clean, mmr_group) %>%
+  mutate(values = row_number(),
+         labels = as_factor(mmr_group),
+         freq = n,
+         .keep = 'none') %>%
+  kable()
+```
