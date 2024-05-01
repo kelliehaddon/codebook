@@ -1,6 +1,6 @@
 # Codebook
 
-This [codebook](codebook.pdf) is part of an [assignment](codebook-assignment.pdf) for my data analysis class (SIS 750) at the School of International Development at American University. The assignment was to find and wrangle a dataset, prepare it for "public" use, and create a codebook for the dataset to serve as a reference guide for anyone who wants to use this data.
+This [codebook](codebook.pdf) is part of an assignment for my data analysis class (SIS 750) at the School of International Development at American University. The assignment was to find and wrangle a dataset, prepare it for "public" use, and create a codebook for the dataset to serve as a reference guide for anyone who wants to use this data.
 
 The final dataset is stored as both a [.csv file](maternal_health_2014.csv) and an [.rdata file](maternal_health_2014.rdata).
 
